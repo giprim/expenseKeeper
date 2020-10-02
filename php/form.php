@@ -11,8 +11,8 @@ $user = new User($username,$email,$password);
 $db = new DBChecks();
 echo $user->get_userDetails();
 echo "\n\r\n";
-echo $user->testConnection();
 
+echo $user->insertUser();
 
 
 

@@ -5,10 +5,10 @@ class DBChecks{
     private $HOST = 'localhost';
     private $USER = 'root';
     private $PASS = '';
-    private $DB = '';
+    private $DB = 'expensedb';
 
     function __construct(){
-        $this->CON = mysqli_connect($this->HOST, $this->USER,$this->PASS);
+        $this->CON = mysqli_connect($this->HOST, $this->USER,$this->PASS, $this->DB);
     }
 
     function test(){
@@ -16,6 +16,15 @@ class DBChecks{
             return "connected";
         }
         return "failed" . " " . $this->CON;
+    }
+
+    function excuteQuery($query){
+        try {
+            $run = mysqli_query($this->CON, $query);
+            if ($run) return "successful";
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }
 
