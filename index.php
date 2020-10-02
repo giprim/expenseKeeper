@@ -6,15 +6,12 @@
     <title>Users</title>
 </head>
 <body>
-    <form action="form.php" method="post">
-        <input type="text" name="first" id="first" placeholder="first name">
-        <input type="text" name="last" id="last" placeholder='last name'>
-        <input type="text" name="age" id="age" placeholder='age'>
-        <select name="gender" id="gender" >
-            <option value="" selected disabled>--gender--</option>
-            <option value="male">male</option>
-            <option value="female">female</option>
-        </select>
+  
+
+    <form action="php/form.php" method="post">
+        <input type="text" name="username" id="username" placeholder="username">
+        <input type="password" name="password" id="password" placeholder='password'>        
+        <!-- <input type="password" name="password" id="password" placeholder='confirm password'>         -->
         <input type="text" name="email" id='email' placeholder='email'>
         <input type="submit" value="submit">
     </form>

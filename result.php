@@ -1,4 +1,4 @@
-<?php include_once('form.php')
+<?php include_once('php/form.php')
     $user = new User()
 ?>
 
@@ -10,6 +10,6 @@
     <title>result</title>
 </head>
 <body>
-    <h1><?php echo  ?> </h1>
+    <h1><?php echo  $user->get_firstAndLastName()?> </h1>
 </body>
 </html>
