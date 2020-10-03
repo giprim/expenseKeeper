@@ -1,6 +1,6 @@
 <?php
 
-class DBChecks{
+class DBConnection{
     public $CON;
     private $HOST = 'localhost';
     private $USER = 'root';
@@ -21,7 +21,7 @@ class DBChecks{
     function excuteQuery($query){
         try {
             $run = mysqli_query($this->CON, $query);
-            if ($run) return "successful";
+            if ($run) return $run;
         } catch (\Throwable $th) {
             throw $th;
         }
