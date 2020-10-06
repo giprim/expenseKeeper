@@ -18,10 +18,10 @@ $result = $db->fetchUser();
 // echo $result;
 $index = 0;
 
-// while($index < $result.length)
-// {
-//     echo $result[$index]->username . $result[$index]->email . "\n\r\n";
-//     $index ++;
-// }
+while($index < count($result))
+{
+    echo $result[$index]->username . $result[$index]->email . "\n\r\n";
+    $index ++;
+}
 
 ?>
